@@ -9,6 +9,8 @@ import Attendance from './pages/Attendance';
 import Accounting from './pages/Accounting';
 import ExamResults from './pages/ExamResults';
 import Settings from './pages/Settings';
+import ExamsPage from './pages/ExamsPage';
+import CalendarPage from './pages/CalendarPage';
 // Placeholder Component
 const Placeholder = ({ title }) => (
   <div className="flex items-center justify-center h-64 text-gray-400 font-bold text-2xl border-4 border-dashed rounded-[3rem] m-10">
@@ -34,8 +36,10 @@ function App() {
         <Route path="/teachers" element={<TeacherManagement />} />
         <Route path="/attendance" element={<Attendance />} />
         <Route path="/accounting" element={<Accounting />} />
-        <Route path="/exams" element={<ExamResults />} />
+        <Route path="/exam-results" element={<ExamResults />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/exams" element={<ExamsPage />} />
+        <Route path="/calendar" element={<CalendarPage />} />
 
         {/* ၃။ Page မရှိရင် Dashboard ကိုပဲ ပြန်လွှတ်မယ် */}
         <Route path="*" element={<Navigate to="/" replace />} />
