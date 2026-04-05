@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from '../components/Layout/Sidebar';
 import Navbar from '../components/Layout/Navbar';
-import RightAside from '../components/Layout/RightAside';
+// import RightAside from '../components/Layout/RightAside';
 import StatCard from '../components/Shared/StatCard';
 import { Link, useNavigate } from 'react-router-dom';
 import {
@@ -259,8 +259,8 @@ const Dashboard = () => {
                         </div>
 
                     </main>
-
-                    <RightAside />
+{/* 
+                    <RightAside /> */}
                 </div>
             </div>
             {showEventModal && (

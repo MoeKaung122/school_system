@@ -2,9 +2,9 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Sidebar from '../components/Layout/Sidebar';
 import Navbar from '../components/Layout/Navbar';
-import { 
-  ArrowLeft, Edit3, Phone, Mail, MapPin, 
-  Calendar, CreditCard, Award, BookOpen 
+import {
+  ArrowLeft, Edit3, Phone, Mail, MapPin,
+  Calendar, CreditCard, Award, BookOpen
 } from 'lucide-react';
 
 const StudentProfile = () => {
@@ -28,20 +28,20 @@ const StudentProfile = () => {
       <Sidebar />
       <div className="flex-1 flex flex-col overflow-hidden">
         <Navbar />
-        
+
         <main className="flex-1 overflow-y-auto p-6 lg:p-10">
           {/* Header & Actions */}
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center space-x-4">
-              <button 
-                onClick={() => navigate(-1)} 
+              <button
+                onClick={() => navigate(-1)}
                 className="p-2 bg-white rounded-xl shadow-sm hover:bg-gray-50 text-gray-400"
               >
                 <ArrowLeft size={20} />
               </button>
               <h1 className="text-2xl font-black text-gray-800 tracking-tight">Student Profile</h1>
             </div>
-            <button 
+            <button
               onClick={() => navigate('/admission', { state: { studentData: student, isEdit: true } })}
               className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-2xl font-bold shadow-lg shadow-indigo-100 flex items-center space-x-2 transition-all"
             >
@@ -51,7 +51,7 @@ const StudentProfile = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
+
             {/* Left Column: Basic Info Card */}
             <div className="lg:col-span-1 space-y-6">
               <div className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-gray-100 text-center">
@@ -60,7 +60,7 @@ const StudentProfile = () => {
                 </div>
                 <h2 className="text-xl font-black text-gray-800">{student.name}</h2>
                 <p className="text-gray-400 font-bold text-xs uppercase tracking-widest mt-1">{student.admission_no}</p>
-                
+
                 <div className="mt-6 flex flex-wrap justify-center gap-2">
                   <span className="bg-emerald-50 text-emerald-600 text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider border border-emerald-100">
                     {student.status || 'Active'}
@@ -93,7 +93,7 @@ const StudentProfile = () => {
 
             {/* Right Column: Detailed Tabs/Cards */}
             <div className="lg:col-span-2 space-y-8">
-              
+
               {/* Academic & Parent Info Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Parents Card */}

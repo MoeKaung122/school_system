@@ -252,4 +252,4 @@ const StudentAdmission = () => {
   );
 };
 
-export default StudentAdmission;
+export default StudentAdmission; 
